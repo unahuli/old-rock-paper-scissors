@@ -5,9 +5,31 @@
 </head>
 <body>
     <script>
-        
+        function computerPlay() {
+            const playValue = generateRandom();
+
+            switch (playValue) {
+                case 1:
+                    return 'Rock';
+                    break;
+                
+                case 2:
+                    return 'Paper';
+                    break;
+
+                case 3:
+                    return 'Scissors';
+                    break;
+
+            }
+            
+        }
+
+        function generateRandom() {
+            returns Math.floor(Math.random()*3 + 1);
+        }
     </script>
 </body>
 </html>>
-    <
-</htm>
+    
+</html>
