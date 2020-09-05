@@ -1,0 +1,19 @@
+Rock Paper Scissors!
+
+UI: Console log. Player input is via console.
+
+1. Take player selection and computer selection.
+    1.1 Player selection must be either rock, paper or scissors only.
+    1.2 Player selection can be case-insensitive.
+    1.3 Computer selection is randomized.
+2. Compare playher selection against computer selection.
+    2.1 If player plays rock and comp plays rock, the result is a draw.
+    2.2 If player plays rock and comp plays paper, player loses.
+    2.3 If player plays rock and comp plays scissors. player wins.
+    2.4 If player plays paper and comp plays paper, the result is a draw.
+    2.5 If player plays paper and comp plays scissors, player wins.
+    2.6 If player plays paper and comp plays rock, player wins.
+    2.7 If player plays scissors and comp plays scissors, the result is a draw.
+    2.8 If player plays scissors and comp plays rock, player loses.
+    2.9 If player plays scissors and comp plays paper, player wins.
+3. Ouput the result of the round.    
