@@ -7,7 +7,19 @@
 
 <body>
     <script>
-        
+        function getPlayerSelection() {
+            const playerSelection = prompt("Rock, Paper or Scissors?");
+
+        }
+
+        function validateSelection(playerSelection) {
+            playerSelection = playerSelection.toLowerCase();
+            return playerSelection === 'rock' ||
+                playerSelection === 'paper' ||
+                playerSelection === 'scissors';
+        }
+
     </script>
 </body>
+
 </html>
