@@ -8,11 +8,33 @@
 <body>
     <script>
         function getPlayerSelection() {
-            const playerSelection = prompt("Rock, Paper or Scissors?");
-
+            const playerSelection = prompt('Rock, Paper or Scissors?');
+            if (isValid(playerSelection)) {
+                return playerSelection;
+            } else {
+                alert('Rock, Paper or Scissors only :(');
+            }
         }
 
-        function validateSelection(playerSelection) {
+        function computerPlay() {
+            const random = Math.floor(Math.random() * 3);
+            let computerSelection;
+            switch(random) {
+                case 0: 
+                    computerSelection = 'rock';
+                    break;
+
+                case 1:
+                    computerSelection = 'paper';
+                    break;
+
+                case 2:
+                    computerSelection = 'scissors';
+            }
+            return computerSelection;
+        }
+
+        function isValid(playerSelection) {
             playerSelection = playerSelection.toLowerCase();
             return playerSelection === 'rock' ||
                 playerSelection === 'paper' ||
