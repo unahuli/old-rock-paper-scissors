@@ -10,7 +10,7 @@
         function getPlayerSelection() {
             const playerSelection = prompt('Rock, Paper or Scissors?');
             if (isValid(playerSelection)) {
-                return playerSelection;
+                return toCapitalize(playerSelection);
             } else {
                 alert('Rock, Paper or Scissors only :(');
             }
@@ -39,6 +39,13 @@
             return playerSelection === 'rock' ||
                 playerSelection === 'paper' ||
                 playerSelection === 'scissors';
+        }
+
+        function toCapitalize(playerSelection) {
+            playerSelection = playerSelection.toLowerCase();
+            const firstLetter = playerSelection.slice(0,1);
+            playerSelection = playerSelection.replace(firstLetter, firstLetter.toUpperCase());
+            return playerSelection;
         }
 
     </script>
