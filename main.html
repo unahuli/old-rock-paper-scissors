@@ -7,10 +7,31 @@
 
 <body>
     <script>
+        function game() {
+            alert(playRound(getPlayerSelection, computerPlay));
+        }
+        
+        function playRound(playerChoice, computerChoice) {
+            const playerSelection = playerChoice();
+            const computerSelection = computerChoice();
+
+            if(playerSelection === computerSelection) {
+                return `It's a draw! ${playerSelection} is equal to ${computerSelection}.`;
+            } else if (playerSelection === 'Rock' && computerSelection === 'Scissors'
+                    || playerSelection === 'Scissors' && computerSelection === 'Paper'
+                    || playerSelection === 'Paper' && computerSelection === 'Rock'){
+                return `You Win! ${computerSelection} loses to ${playerSelection}.`;
+            } else {
+                return `You Lose! ${computerSelection} beats ${playerSelection}.`
+            }
+        }
+
         function getPlayerSelection() {
             const playerSelection = prompt('Rock, Paper or Scissors?');
-            if (isValid(playerSelection)) {
-                return toCapitalize(playerSelection);
+            if (!playerSelection) {
+                alert('Make your choice.');
+            } else if (isValid(playerSelection)){
+                return toCapitalize(playerSelection);                
             } else {
                 alert('Rock, Paper or Scissors only :(');
             }
@@ -21,15 +42,15 @@
             let computerSelection;
             switch(random) {
                 case 0: 
-                    computerSelection = 'rock';
+                    computerSelection = 'Rock';
                     break;
 
                 case 1:
-                    computerSelection = 'paper';
+                    computerSelection = 'Paper';
                     break;
 
                 case 2:
-                    computerSelection = 'scissors';
+                    computerSelection = 'Scissors';
             }
             return computerSelection;
         }
