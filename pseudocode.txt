@@ -17,3 +17,7 @@ UI: Console log. Player input is via console.
     2.8 If player plays scissors and comp plays rock, player loses.
     2.9 If player plays scissors and comp plays paper, player wins.
 3. Ouput the result of the round.    
+
+Rock Paper Scissors! ver 2
+
+UI: Create a button for each player selection.

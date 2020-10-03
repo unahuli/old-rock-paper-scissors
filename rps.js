@@ -1,3 +1,8 @@
+const buttons = document.querySelectorAll('button[class=move]');
+buttons.forEach(button => 
+    button.addEventListener('click', getPlayerSelection));
+    //console.log(button.value)));
+
 function game() {
     console.log((playRound(getPlayerSelection, computerPlay)));
 }
@@ -18,14 +23,16 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function getPlayerSelection() {
-    const playerSelection = prompt('Rock, Paper or Scissors?');
-    if (!playerSelection) {
-        alert('Make your choice.');
-    } else if (isValid(playerSelection)){
-        return toCapitalize(playerSelection);                
-    } else {
-        alert('Rock, Paper or Scissors only :(');
-    }
+    // const playerSelection = prompt('Rock, Paper or Scissors?');
+    // if (!playerSelection) {
+    //     alert('Make your choice.');
+    // } else if (isValid(playerSelection)){
+    //     return toCapitalize(playerSelection);                
+    // } else {
+    //     alert('Rock, Paper or Scissors only :(');
+    // }
+    //console.log(toCapitalize(this.value));
+    return toCapitalize(this.value);
 }
 
 function computerPlay() {
