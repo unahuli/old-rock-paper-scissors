@@ -21,3 +21,6 @@ UI: Console log. Player input is via console.
 Rock Paper Scissors! ver 2
 
 UI: Create a button for each player selection.
+
+Player makes a choice by clicking a button.
+Button value is passed to ???

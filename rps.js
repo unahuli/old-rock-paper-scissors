@@ -1,24 +1,24 @@
 const buttons = document.querySelectorAll('button[class=move]');
 buttons.forEach(button => 
-    button.addEventListener('click', getPlayerSelection));
+    button.addEventListener('click', playRound));
     //console.log(button.value)));
-
+const results = document.querySelector('.results');
 function game() {
     console.log((playRound(getPlayerSelection, computerPlay)));
 }
 
-function playRound(playerChoice, computerChoice) {
-    const playerSelection = playerChoice();
-    const computerSelection = computerChoice();
+function playRound() {
+    const playerSelection = toCapitalize(this.value);
+    const computerSelection = computerPlay();
 
     if(playerSelection === computerSelection) {
-        return `It's a draw! ${playerSelection} is equal to ${computerSelection}.`;
+        results.textContent = `It's a draw! ${playerSelection} is equal to ${computerSelection}.`;
     } else if (playerSelection === 'Rock' && computerSelection === 'Scissors'
             || playerSelection === 'Scissors' && computerSelection === 'Paper'
             || playerSelection === 'Paper' && computerSelection === 'Rock'){
-        return `You Win! ${computerSelection} loses to ${playerSelection}.`;
+        results.textContent = `You Win! ${computerSelection} loses to ${playerSelection}.`;
     } else {
-        return `You Lose! ${computerSelection} beats ${playerSelection}.`
+        results.textContent = `You Lose! ${computerSelection} beats ${playerSelection}.`
     }
 }
 
