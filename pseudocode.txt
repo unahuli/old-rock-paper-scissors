@@ -22,5 +22,6 @@ Rock Paper Scissors! ver 2
 
 UI: Create a button for each player selection.
 
+Set number of rounds to 0;
 Player makes a choice by clicking a button.
 Button value is passed to ???
